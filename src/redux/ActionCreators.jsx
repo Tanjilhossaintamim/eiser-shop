@@ -34,7 +34,7 @@ export const fetch_singel_product = (productId) => (dispatch) => {
 export const fetch_feature_product = (limit) => (dispatch) => {
   dispatch(product_loading(true));
   axios
-    .get("https://api.escuelajs.co/api/v1/products?offset=0&limit=" + limit)
+    .get("https://fakestoreapi.com/products?limit=" + limit)
     .then((response) => {
       dispatch(product_loading(false));
       dispatch(load_feature_product(response.data));
